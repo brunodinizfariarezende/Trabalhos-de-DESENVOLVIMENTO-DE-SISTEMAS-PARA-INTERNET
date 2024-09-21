@@ -52,7 +52,7 @@
             min-height: 400px;
             background: url('showcase.jpg') no-repeat 0 -400px;
             text-align: center;
-            color: #fff;
+            color: #ff00;
         }
         #showcase h1 {
             margin-top: 100px;
