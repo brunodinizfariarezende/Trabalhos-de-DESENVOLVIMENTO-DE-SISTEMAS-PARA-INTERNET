@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         .container {
-            width: 80%;
+            width: 100%;
             margin: auto;
             overflow: hidden;
         }
@@ -72,6 +72,23 @@
             color: #fff;
             background-color: #333;
             text-align: center;
+        }
+        @media (max-width: 768px) {
+            header nav {
+                float: none;
+                text-align: center;
+            }
+            header li {
+                float: none;
+                display: block;
+                padding: 10px 0;
+            }
+            #showcase h1 {
+                font-size: 35px;
+            }
+            #showcase p {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
