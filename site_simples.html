@@ -90,7 +90,15 @@
                 font-size: 18px;
             }
         }
+	@media (max-width: 768px) {
+    /* Estilos para telas menores */
+    form {
+        width: 100%;
+    }
+}
     </style>
+
+
 </head>
 <body>
     <header>
@@ -131,13 +139,45 @@
             <h2 id="contact">Contato</h2>
             <p>Email: <a href="mailto:prof.brunodinizfaria@gmail.com">prof.brunodinizfaria@gmail.com</a></p>
             <p>Telefone: (62) 98400-3772</p>
-            
         </div>
     </section>
+
+<form method="post" action="processa_cadastro.php">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="senha">Senha:</label>   
+
+    <input type="password" id="senha" name="senha" required>
+    <button type="submit">Cadastrar</button>   
+
+</form>
 
     <footer>
         <p>Conecte-se comigo nas redes sociais:</p>
         <p><a href="https://www.instagram.com/professorbrunodinizfaria" target="_blank">Instagram</a> | <a href="https://linktr.ee/brunodiniz" target="_blank">Linktree</a></p>
     </footer>
+
+    <script>
+<?php
+        // Adiciona um evento de clique para os links de navegação
+        document.querySelectorAll('header nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Obtém o destino do link (o id da seção)
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                // Rola suavemente
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50, // Ajuste para ficar acima das seções
+                    behavior: 'smooth'
+                });
+            });
+        });
+?>
+    </script>
 </body>
 </html>
